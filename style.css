@@ -1,0 +1,185 @@
+/*
+Theme Name: Toposel Theme
+Author: Srinidhi
+Version: 1.0
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 480px;
+  margin: auto;
+}
+
+/* Announcement */
+.announcement {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 15px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 13px;
+  color: #666;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Brand Logos */
+.brands {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 10px;
+  overflow-x: auto;
+}
+
+.brands img {
+  height: 30px;
+  opacity: 0.7;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Custom Products (Homepage) */
+.products {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  width: 50%;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* WooCommerce Shop Styling */
+/* ========================= */
+
+.woocommerce ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.woocommerce ul.products li.product {
+  width: 48%;
+  list-style: none;
+}
+
+.woocommerce ul.products li.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.woocommerce ul.products li.product h2 {
+  font-size: 14px;
+}
+
+.woocommerce ul.products li.product .price {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.woocommerce ul.products li.product .button {
+  background: black;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Remove default Woo styles */
+.woocommerce ul.products li.product {
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .products,
+  .woocommerce ul.products {
+    flex-direction: row;
+  }
+}
+/* Remove blue links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Center WooCommerce content properly */
+.woocommerce {
+  max-width: 480px;
+  margin: auto;
+}
+
+/* Fix spacing */
+.woocommerce ul.products {
+  margin: 0;
+}
