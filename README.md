@@ -1,6 +1,6 @@
 # Toposel WooCommerce Theme
-
-This is a custom WordPress WooCommerce theme developed as part of an assignment.
+## 📌 Project Overview
+This project is a custom WordPress WooCommerce theme developed with a mobile-first approach. It focuses on clean UI, product display, and responsive layout.
 
 ## 🔥 Features
 - Mobile-first responsive design
