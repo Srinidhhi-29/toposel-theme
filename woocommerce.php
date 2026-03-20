@@ -1,10 +1,13 @@
-<?php
-defined('ABSPATH') || exit;
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="container">
-  <?php woocommerce_content(); ?>
+
+  <main class="site-main">
+
+    <?php woocommerce_content(); ?>
+
+  </main>
+
 </div>
 
 <?php get_footer(); ?>

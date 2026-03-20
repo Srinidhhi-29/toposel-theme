@@ -4,18 +4,24 @@ Author: Srinidhi
 Version: 1.0
 */
 
-body {
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
   max-width: 480px;
   margin: auto;
 }
 
-/* Announcement */
+/* ANNOUNCEMENT */
 .announcement {
   background: black;
   color: white;
@@ -24,15 +30,14 @@ body {
   font-size: 12px;
 }
 
-/* Header */
+/* HEADER */
 .site-header {
   text-align: center;
   padding: 15px 0;
   font-weight: bold;
-  border-bottom: 1px solid #eee;
 }
 
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
   padding: 15px;
@@ -43,48 +48,27 @@ body {
   border-radius: 10px;
 }
 
-.hero h1 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.hero p {
-  font-size: 13px;
-  color: #666;
-}
-
 .hero-btn {
-  display: inline-block;
   background: black;
   color: white;
   padding: 10px 20px;
-  margin-top: 10px;
-  text-decoration: none;
+  display: inline-block;
   border-radius: 5px;
-  font-size: 14px;
+  text-decoration: none;
 }
 
-/* Brand Logos */
+/* BRANDS */
 .brands {
   display: flex;
   justify-content: space-around;
-  padding: 15px 10px;
-  overflow-x: auto;
+  padding: 15px;
 }
 
 .brands img {
   height: 30px;
-  opacity: 0.7;
 }
 
-/* Section Title */
-.section-title {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-/* Custom Products (Homepage) */
+/* PRODUCTS */
 .products {
   display: flex;
   gap: 10px;
@@ -99,87 +83,140 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-.card h3 {
-  font-size: 14px;
-  margin: 5px 0;
-}
+/* ================= */
+/* SHOP FIX */
+/* ================= */
 
-.card p {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-/* ========================= */
-/* WooCommerce Shop Styling */
-/* ========================= */
-
-.woocommerce ul.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-}
-
-.woocommerce ul.products li.product {
-  width: 48%;
-  list-style: none;
-}
-
-.woocommerce ul.products li.product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.woocommerce ul.products li.product h2 {
-  font-size: 14px;
-}
-
-.woocommerce ul.products li.product .price {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.woocommerce ul.products li.product .button {
-  background: black;
-  color: white;
-  padding: 8px;
-  text-align: center;
-  display: block;
-  margin-top: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-/* Remove default Woo styles */
-.woocommerce ul.products li.product {
-  border: none;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .products,
-  .woocommerce ul.products {
-    flex-direction: row;
-  }
-}
-/* Remove blue links */
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Center WooCommerce content properly */
 .woocommerce {
   max-width: 480px;
   margin: auto;
 }
 
-/* Fix spacing */
+/* FORCE GRID */
 .woocommerce ul.products {
-  margin: 0;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 15px !important;
+  list-style: none !important;
+  padding: 10px !important;
+}
+
+/* REMOVE BULLETS */
+.woocommerce ul.products li.product::before {
+  display: none !important;
+}
+
+/* PRODUCT CARD */
+.woocommerce ul.products li.product {
+  background: #fff !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  text-align: center;
+}
+
+/* IMAGE */
+.woocommerce ul.products li.product img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+
+/* BUTTON */
+.woocommerce ul.products li.product .button {
+  background: black !important;
+  color: white !important;
+  padding: 8px !important;
+  border-radius: 5px !important;
+  display: block;
+  margin-top: 10px;
+}
+
+/* REMOVE BLUE LINKS */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* FORCE STYLE SHOP */
+
+.site-main ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+  list-style: none !important;
+  padding: 10px !important;
+}
+
+.site-main ul.products li.product {
+  list-style: none !important;
+  background: #fff !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+}
+
+.site-main ul.products li.product img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+
+.site-main ul.products li.product .button {
+  background: black !important;
+  color: white !important;
+  padding: 8px !important;
+  display: block !important;
+  margin-top: 10px;
+}
+
+.site-main ul.products li.product::before {
+  content: none !important;
+}
+/* FINAL POLISH */
+
+/* FIX TITLE */
+.site-main ul.products li.product h2 {
+  font-size: 14px;
+  line-height: 1.3;
+  min-height: 40px;
+}
+
+/* FIX CARD HEIGHT */
+.site-main ul.products li.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FIX BUTTON POSITION */
+.site-main ul.products li.product .button {
+  margin-top: auto;
+}
+
+/* CENTER EVERYTHING */
+.site-main ul.products {
+  justify-items: center;
+}
+/* BACKGROUND IMPROVEMENT */
+body {
+  background: #f5f5f5;
+}
+
+/* SHOP CARD CONTRAST */
+.site-main ul.products li.product {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ADD SPACE AROUND SHOP */
+.site-main {
+  padding: 20px 0;
+}
+.site-main ul.products li.product {
+  transition: 0.3s;
+}
+
+.site-main ul.products li.product:hover {
+  transform: translateY(-3px);
 }

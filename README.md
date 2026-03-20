@@ -17,9 +17,11 @@ This is a custom WordPress WooCommerce theme developed as part of an assignment.
 - PHP
 
 ## 📸 Screenshots
+### Homepage
 ![alt text](image.png)
 ![alt text](image-1.png)
-
+### Shop
+![alt text](image-2.png)
 ## 🚀 How to Run
 1. Install WordPress
 2. Copy theme into wp-content/themes/
